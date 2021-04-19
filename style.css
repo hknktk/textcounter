@@ -16,6 +16,40 @@ body {
   text-shadow: 1px 1px 5px #7a7a7a;
 }
 
+.setting {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 1.6rem;
+}
+
+.setting p {
+  font-size: 1.4rem;
+}
+
+.setting p span {
+  font-size: 1.2rem;
+}
+
+.setting .set_button {
+  width: 80px;
+  background-color: #fff;
+  border: 1px solid #8deb81;
+  font-weight: 700;
+}
+
+.alert {
+  color: #f13a1a;
+  font-size: 1.5rem;
+  opacity: 0;
+  -webkit-transition: opacity .6s;
+  transition: opacity .6s;
+}
+
+.alert.show {
+  opacity: 1;
+}
+
 .content {
   width: 80%;
   max-width: 350px;
@@ -23,6 +57,50 @@ body {
   margin: 24px auto 48px;
   resize: none;
   font-size: 1.6rem;
+}
+
+.result {
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  color: #0b7e6b;
+  text-align: center;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+.result.show {
+  opacity: 1;
+}
+
+@-webkit-keyframes display {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes display {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .counter {
@@ -40,17 +118,23 @@ body {
   font-weight: 700;
 }
 
-.copy_button {
+.button {
   width: 40%;
   max-width: 200px;
   padding: 8px;
   background-color: #fff;
-  border: solid 2px #66d6d6;
-  -webkit-box-shadow: 2px 2px 5px #0a2c36;
-          box-shadow: 2px 2px 5px #0a2c36;
-  margin: 0 auto 72px;
+  border: solid 2px #d67766;
+  -webkit-box-shadow: 2px 2px 5px #360d0a;
+          box-shadow: 2px 2px 5px #360d0a;
+  margin: 0 auto 32px;
   display: block;
   font-weight: 600;
   border-radius: 5px;
+}
+
+.button.copy_button {
+  border: solid 2px #66d6d6;
+  -webkit-box-shadow: 2px 2px 5px #0a2c36;
+          box-shadow: 2px 2px 5px #0a2c36;
 }
 /*# sourceMappingURL=style.css.map */
