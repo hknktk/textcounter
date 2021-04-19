@@ -1,7 +1,6 @@
 {
   const $text = document.querySelector('#content');
   const $number = document.querySelector('#counter_number');
-  const $counter_button = document.querySelector('#counter_button');
   const $copy_button = document.querySelector('#copy_button');
 
 
@@ -13,12 +12,12 @@
     $number.textContent = $length;
   }
 
-  $counter_button.addEventListener('click' , () =>{
+  $text.addEventListener('change', () =>{
     countUp();
   })
 
 
-  $copy_button.addEventListener('click' , () => {
+  $copy_button.addEventListener('click', () => {
     textCopy();
   })
 
