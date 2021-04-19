@@ -10,10 +10,12 @@ body {
 }
 
 .title {
-  font-size: 1.8rem;
-  padding: 16px;
+  font-size: 1.6rem;
+  margin-top: 8px;
+  margin-bottom: 8px;
   text-align: center;
   font-weight: 700;
+  color: #ec4242;
   text-shadow: 1px 1px 5px #7a7a7a;
 }
 
@@ -69,9 +71,9 @@ body {
 .content {
   width: 80%;
   max-width: 350px;
-  height: 100px;
+  height: 60px;
   display: block;
-  margin: 24px auto 48px;
+  margin: 24px auto 16px;
   resize: none;
   font-size: 1.6rem;
 }
