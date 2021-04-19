@@ -24,11 +24,13 @@ body {
 
 .setting .setting_length {
   display: inline-block;
-  width: 50%;
+  width: 35%;
+  font-size: 1.6rem;
 }
 
 .setting p {
   font-size: 1.4rem;
+  margin-bottom: 4px;
 }
 
 .setting p span {
