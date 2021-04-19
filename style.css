@@ -5,14 +5,15 @@
 
 body {
   font-size: 62.5%;
+  background-color: #ffd6bb;
 }
 
 .title {
   font-size: 1.8rem;
-  color: #f79696;
   padding: 16px;
   text-align: center;
   font-weight: 700;
+  text-shadow: 1px 1px 5px #7a7a7a;
 }
 
 .content {
@@ -46,7 +47,16 @@ body {
   border: solid 2px #e04545;
   -webkit-box-shadow: 2px 2px 5px #440606;
           box-shadow: 2px 2px 5px #440606;
-  margin: 0 auto;
+  margin: 0 auto 72px;
   display: block;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.button.copy_button {
+  width: 25%;
+  border: solid 2px #66d6d6;
+  -webkit-box-shadow: 2px 2px 5px #0a2c36;
+          box-shadow: 2px 2px 5px #0a2c36;
 }
 /*# sourceMappingURL=style.css.map */
