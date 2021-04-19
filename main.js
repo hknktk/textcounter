@@ -28,9 +28,14 @@
   function countDown() {
     let $length = $text.value.length;
     let $setting_length = document.querySelector('#setting_length').value;
-    $alert_message.textContent = $setting_length - $length + '文字足りません。';
+
     if($setting_length - $length < 0){
-      $alert_message.textContent = $length-$setting_length + "文字オーバーしています。"
+      $alert_message.textContent = $length-$setting_length + "文字オーバーしています。";
+    }
+    else if($setting_length - $length === 0){
+      $alert_message.textContent = 'ちょうど'+ $setting_length + '文字です。';
+    }else{
+      $alert_message.textContent = $setting_length - $length + '文字足りません。';
     }
   }
 

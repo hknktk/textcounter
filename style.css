@@ -17,10 +17,14 @@ body {
 }
 
 .setting {
-  width: 80%;
-  max-width: 400px;
-  margin: 0 auto;
+  width: 100%;
+  text-align: center;
   font-size: 1.6rem;
+}
+
+.setting .setting_length {
+  display: inline-block;
+  width: 50%;
 }
 
 .setting p {
@@ -32,9 +36,12 @@ body {
 }
 
 .setting .set_button {
-  width: 80px;
+  display: inline-block;
+  width: 15%;
   background-color: #fff;
-  border: 1px solid #8deb81;
+  border: solid 2px #d67766;
+  -webkit-box-shadow: 2px 2px 5px #360d0a;
+          box-shadow: 2px 2px 5px #360d0a;
   font-weight: 700;
 }
 
@@ -44,6 +51,7 @@ body {
   opacity: 0;
   -webkit-transition: opacity .6s;
   transition: opacity .6s;
+  margin-top: 8px;
 }
 
 .alert.show {
