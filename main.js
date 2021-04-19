@@ -1,6 +1,5 @@
 {
   const $text = document.querySelector('#content');
-  const $minus = document.querySelector('#minus');
   const $number = document.querySelector('#counter_number');
   const $counter_button = document.querySelector('#counter_button');
   const $set_button = document.querySelector('#set_button');
@@ -33,7 +32,7 @@
       return;
     }
 
-    if($setting_length - $length < 0){
+    else if($setting_length - $length < 0){
       $alert_message.textContent = $length-$setting_length + "文字オーバーしています。";
     }
     else if($setting_length - $length === 0){
@@ -59,18 +58,18 @@
   }
 
 
-  $set_button.addEventListener('click', () =>{
+  $set_button.addEventListener('touchend', () =>{
       numberCheck();
   })
 
 
-  $counter_button.addEventListener('click', () =>{
+  $counter_button.addEventListener('touchend', () =>{
     countUp();
     countDown();
   })
 
 
-  $copy_button.addEventListener('click', () => {
+  $copy_button.addEventListener('touchend', () => {
     textCopy();
     result_display();
   })
