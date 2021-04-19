@@ -29,6 +29,10 @@
     let $length = $text.value.length;
     let $setting_length = document.querySelector('#setting_length').value;
 
+    if($setting_length === ''){
+      return;
+    }
+
     if($setting_length - $length < 0){
       $alert_message.textContent = $length-$setting_length + "文字オーバーしています。";
     }
@@ -56,7 +60,7 @@
 
 
   $set_button.addEventListener('click', () =>{
-    numberCheck();
+      numberCheck();
   })
 
 

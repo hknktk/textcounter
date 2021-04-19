@@ -13,7 +13,7 @@
   <h2 class="title" id="title">文字数カウンター</h2>
 
 <div class="setting">
-  <p>目標文字数入力欄 <span>（任意）</span></p>
+  <p>目標文字数設定 <span>（任意）</span></p>
   <input class="setting_length" id="setting_length" type="tel"> <button class="set_button" id="set_button">設定</button>
 
   <p class="alert" id="alert"></p>
@@ -27,15 +27,19 @@
     <p class="counter_inner" id="counter_inner">現在、<span class="counter_number" id="counter_number">0</span> 文字です。</p>
   </div>
 
+  <div class="bottom_button_container">
+    <button class="button counter_button" id="counter_button">
+      カウント
+    </button>
+    
+    
+    <button class="button copy_button" id="copy_button">
+      コピー
+    </button>
+  </div>
+
   
-  <button class="button counter_button" id="counter_button">
-    カウント
-  </button>
-  
-  
-  <button class="button copy_button" id="copy_button">
-    コピー
-  </button>
+ 
   
   <p class="result" id="result">コピーが完了しました。</p>
 
