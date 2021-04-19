@@ -8,9 +8,9 @@
 
 
   function countUp() {
-    $text.value= $text.value.replace(/\r\n/g, '');
-    $text.value = $text.value.replace(/\n/g, '');
-    $text.value = $text.value.replace(/\s+/g, '');
+    // $text.value= $text.value.replace(/\r\n/g, '');
+    // $text.value = $text.value.replace(/\n/g, '');
+    // $text.value = $text.value.replace(/\s+/g, '');
     let $length = $text.value.length;
     $number.textContent = $length;
     // alert('countUp');
