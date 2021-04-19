@@ -8,21 +8,22 @@
 
 
   function countUp() {
-    // $text.value= $text.value.replace(/\r\n/g, '');
-    // $text.value = $text.value.replace(/\n/g, '');
-    // $text.value = $text.value.replace(/\s+/g, '');
-    // let $length = $text.value.length;
-    // $number.textContent = $length;
-    alert('countUp');
+    $text.value= $text.value.replace(/\r\n/g, '');
+    $text.value = $text.value.replace(/\n/g, '');
+    $text.value = $text.value.replace(/\s+/g, '');
+    let $length = $text.value.length;
+    $number.textContent = $length;
+    // alert('countUp');
   }
 
 
 
   
   function textCopy() {
-    let textTarget = document.querySelector('#content');
-    textTarget.select();
-    document.execCommand('Copy');
+    // let textTarget = document.querySelector('#content');
+    // textTarget.select();
+    // document.execCommand('Copy');
+    alert('copy')
   }
 
   function countDown() {
@@ -41,7 +42,7 @@
     // }else{
     //   $alert_message.textContent = $setting_length - $length + '文字足りません。';
     // }
-    alert('countDown');
+    // alert('countDown');
   }
 
   function alertMessageShow(){
@@ -81,11 +82,12 @@
 
   const $result = document.querySelector('#result');
   function result_display() {
-    $result.classList.add('show');
+    // $result.classList.add('show');
 
-    setTimeout(() => {
-    $result.classList.remove('show');
-    },6000);
+    // setTimeout(() => {
+    // $result.classList.remove('show');
+    // },6000);
+    alert('result_display');
   }
 
 
