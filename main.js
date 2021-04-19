@@ -59,18 +59,18 @@
   }
 
 
-  $set_button.addEventListener('click', () =>{
+  $set_button.addEventListener('touched', () =>{
       numberCheck();
   })
 
 
-  $counter_button.addEventListener('click', () =>{
+  $counter_button.addEventListener('touched', () =>{
     countUp();
     countDown();
   })
 
 
-  $copy_button.addEventListener('click', () => {
+  $copy_button.addEventListener('touched', () => {
     textCopy();
     result_display();
   })
