@@ -1,0 +1,52 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: #f79696;
+  padding: 16px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.content {
+  width: 80%;
+  max-width: 350px;
+  display: block;
+  margin: 24px auto 48px;
+  resize: none;
+}
+
+.counter {
+  width: 90%;
+  margin: 0 auto 24px;
+  text-align: center;
+}
+
+.counter_inner {
+  font-size: 1.8rem;
+}
+
+.counter_inner span {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.button {
+  width: 40%;
+  max-width: 200px;
+  padding: 8px;
+  background-color: #fff;
+  border: solid 2px #e04545;
+  -webkit-box-shadow: 2px 2px 5px #440606;
+          box-shadow: 2px 2px 5px #440606;
+  margin: 0 auto;
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */
