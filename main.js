@@ -12,7 +12,7 @@
     $number.textContent = $length;
   }
 
-  $text.addEventListener('change', () =>{
+  $text.addEventListener('keyup', () =>{
     countUp();
   })
 
