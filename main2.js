@@ -16,6 +16,11 @@
     // alert('countUp');
   }
 
+  $counter_button.addEventListener('click', () =>{
+    countUp();
+    // countDown();
+  })
+
 
 
   
@@ -68,10 +73,7 @@
   })
 
 
-  $counter_button.addEventListener('click', () =>{
-    countUp();
-    countDown();
-  })
+  
 
 
   $copy_button.addEventListener('click', () => {
