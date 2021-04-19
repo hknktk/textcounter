@@ -49,7 +49,7 @@
   function numberCheck() {
     let $setting_length = document.querySelector('#setting_length').value;
     if(!isNaN($setting_length)){
-      countDown();
+      // countDown();
       alertMessageShow();
     }else{
       $alert_message.textContent = '数字以外が入力されています。';
@@ -65,7 +65,7 @@
 
   $counter_button.addEventListener('touchend', () =>{
     countUp();
-    countDown();
+    // countDown();
   })
 
 
