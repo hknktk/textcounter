@@ -12,12 +12,13 @@
 
   function numberCheck() {
     let $setting_length = document.querySelector('#setting_length').value;
+    $alert_message.classList.add('show');
     if(!isNaN($setting_length)){
       // let $setting_length = document.querySelector('#setting_length').value;
-      $alert_message.classList.add('show');
       $alert_message.textContent = $setting_length + '文字に設定しました。';
-    } else if($setting_length === ''){
-      return;
+    } else{
+      $alert_message.textContent = '数字を入力してください。';
+      document.querySelector('#setting_length').value = '';
     }
   }
 
@@ -49,6 +50,7 @@
   }
   
   $counter_button.addEventListener('click', () =>{
+    numberCheck();
     count();
   })
 
