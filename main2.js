@@ -11,14 +11,13 @@
 
 
   function numberCheck() {
+    let $setting_length = document.querySelector('#setting_length').value;
     if(!isNaN($setting_length)){
-      let $setting_length = document.querySelector('#setting_length').value;
+      // let $setting_length = document.querySelector('#setting_length').value;
       $alert_message.classList.add('show');
       $alert_message.textContent = $setting_length + '文字に設定しました。';
-  
-      if($setting_length === ''){
-        return;
-      }
+    } else if($setting_length === ''){
+      return;
     }
   }
 
