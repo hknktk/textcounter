@@ -10,49 +10,53 @@
 
 
 
-  function numberCheck() {
-    let $setting_length = document.querySelector('#setting_length').value;
-    $alert_message.classList.add('show');
-    if(!isNaN($setting_length)){
-      // let $setting_length = document.querySelector('#setting_length').value;
-      $alert_message.textContent = $setting_length + '文字に設定しました。';
-    } else{
-      $alert_message.textContent = '数字を入力してください。';
-      document.querySelector('#setting_length').value = '';
-    }
-  }
-
-  $set_button.addEventListener('click', () =>{
-    numberCheck();
-  })
-
-
-  // function count() {
-  //   $text.value= $text.value.replace(/\r\n/g, '');
-  //   $text.value = $text.value.replace(/\n/g, '');
-  //   $text.value = $text.value.replace(/\s+/g, '');
-  //   let $length = $text.value.length;
-  //   $number.textContent = $length;
+  // function numberCheck() {
   //   let $setting_length = document.querySelector('#setting_length').value;
-
-
-
-  //  if($setting_length - $length < 0){
-  //     $alert_message.textContent = $length-$setting_length + "文字オーバーしています。";
-  //   }
-  //   else if($setting_length - $length === 0){
-  //     $alert_message.textContent = 'ちょうど'+ $setting_length + '文字です。';
-  //   }else{
-  //     $alert_message.textContent = $setting_length - $length + '文字足りません。';
-  //   }
-
   //   $alert_message.classList.add('show');
+  //   if(!isNaN($setting_length)){
+  //     // let $setting_length = document.querySelector('#setting_length').value;
+  //     $alert_message.textContent = $setting_length + '文字に設定しました。';
+  //   } else{
+  //     $alert_message.textContent = '数字を入力してください。';
+  //     document.querySelector('#setting_length').value = '';
+  //   }
   // }
-  
-  // $counter_button.addEventListener('click', () =>{
+
+  // $set_button.addEventListener('click', () =>{
   //   numberCheck();
-  //   count();
   // })
+
+
+  function count() {
+    $text.value= $text.value.replace(/\r\n/g, '');
+    $text.value = $text.value.replace(/\n/g, '');
+    $text.value = $text.value.replace(/\s+/g, '');
+    let $length = $text.value.length;
+    $number.textContent = $length;
+    let $setting_length = document.querySelector('#setting_length').value;
+
+
+
+   if($setting_length !== '' && $setting_length - $length < 0){
+      $alert_message.textContent = $length-$setting_length + "文字オーバーしています。";
+    }
+    else if($setting_length !== '' && $setting_length - $length === 0){
+      $alert_message.textContent = 'ちょうど'+ $setting_length + '文字です。';
+    }
+    else if($setting_length === ''){
+      $alert_message.textContent = '';
+    }
+    else{
+      $alert_message.textContent = $setting_length - $length + '文字足りません。';
+    }
+
+    $alert_message.classList.add('show');
+  }
+  
+  $counter_button.addEventListener('click', () =>{
+    // numberCheck();
+    count();
+  })
 
 
   // function copy() {
