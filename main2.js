@@ -11,7 +11,6 @@
 
 
   function numberCheck() {
-    let $setting_length = document.querySelector('#setting_length').value;
     if(!isNaN($setting_length)){
       let $setting_length = document.querySelector('#setting_length').value;
       $alert_message.classList.add('show');
@@ -28,8 +27,7 @@
   })
 
 
-  
-  $counter_button.addEventListener('click', () =>{
+  function count() {
     $text.value= $text.value.replace(/\r\n/g, '');
     $text.value = $text.value.replace(/\n/g, '');
     $text.value = $text.value.replace(/\s+/g, '');
@@ -37,11 +35,9 @@
     $number.textContent = $length;
     let $setting_length = document.querySelector('#setting_length').value;
 
-    if($setting_length === ''){
-      return;
-    }
 
-    else if($setting_length - $length < 0){
+
+   if($setting_length - $length < 0){
       $alert_message.textContent = $length-$setting_length + "文字オーバーしています。";
     }
     else if($setting_length - $length === 0){
@@ -51,6 +47,10 @@
     }
 
     $alert_message.classList.add('show');
+  }
+  
+  $counter_button.addEventListener('click', () =>{
+    count();
   })
 
 
