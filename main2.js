@@ -23,9 +23,7 @@
   })
 
 
-  function count() {
-    
-  }
+
   
   $counter_button.addEventListener('click', () =>{
     $text.value= $text.value.replace(/\r\n/g, '');
