@@ -10,24 +10,24 @@
 
 
 
-  // function numberCheck() {
-  //   let $setting_length = document.querySelector('#setting_length').value;
-  //   $alert_message.classList.add('show');
-  //   if(!isNaN($setting_length)){
-  //     // let $setting_length = document.querySelector('#setting_length').value;
-  //     $alert_message.textContent = $setting_length + '文字に設定しました。';
-  //   } else{
-  //     $alert_message.textContent = '数字を入力してください。';
-  //     document.querySelector('#setting_length').value = '';
-  //   }
-  // }
-
-  // $set_button.addEventListener('click', () =>{
-  //   numberCheck();
-  // })
+  $set_button.addEventListener('click', () =>{
+    let $setting_length = document.querySelector('#setting_length').value;
+    $alert_message.classList.add('show');
+    if(!isNaN($setting_length)){
+      // let $setting_length = document.querySelector('#setting_length').value;
+      $alert_message.textContent = $setting_length + '文字に設定しました。';
+    } else{
+      $alert_message.textContent = '数字を入力してください。';
+      document.querySelector('#setting_length').value = '';
+    }
+  })
 
 
   function count() {
+    
+  }
+  
+  $counter_button.addEventListener('click', () =>{
     $text.value= $text.value.replace(/\r\n/g, '');
     $text.value = $text.value.replace(/\n/g, '');
     $text.value = $text.value.replace(/\s+/g, '');
@@ -51,30 +51,20 @@
     }
 
     $alert_message.classList.add('show');
-  }
-  
-  $counter_button.addEventListener('click', () =>{
-    // numberCheck();
-    count();
   })
 
-
-  // function copy() {
-  //   let textTarget = document.querySelector('#content');
-  //   textTarget.select();
-  //   document.execCommand('Copy');
-
-  //   $result.classList.add('show');
-
-  //   setTimeout(() => {
-  //   $result.classList.remove('show');
-  //   },6000);
-  
-  // }
   
 
 
-  // $copy_button.addEventListener('click', () => {
-  // copy();
-  // })
+  $copy_button.addEventListener('click', () => {
+    let textTarget = document.querySelector('#content');
+    textTarget.select();
+    document.execCommand('Copy');
+
+    $result.classList.add('show');
+
+    setTimeout(() => {
+    $result.classList.remove('show');
+    },6000);
+  })
 }
