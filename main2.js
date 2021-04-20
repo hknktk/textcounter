@@ -27,50 +27,50 @@
   })
 
 
-  function count() {
-    $text.value= $text.value.replace(/\r\n/g, '');
-    $text.value = $text.value.replace(/\n/g, '');
-    $text.value = $text.value.replace(/\s+/g, '');
-    let $length = $text.value.length;
-    $number.textContent = $length;
-    let $setting_length = document.querySelector('#setting_length').value;
+  // function count() {
+  //   $text.value= $text.value.replace(/\r\n/g, '');
+  //   $text.value = $text.value.replace(/\n/g, '');
+  //   $text.value = $text.value.replace(/\s+/g, '');
+  //   let $length = $text.value.length;
+  //   $number.textContent = $length;
+  //   let $setting_length = document.querySelector('#setting_length').value;
 
 
 
-   if($setting_length - $length < 0){
-      $alert_message.textContent = $length-$setting_length + "文字オーバーしています。";
-    }
-    else if($setting_length - $length === 0){
-      $alert_message.textContent = 'ちょうど'+ $setting_length + '文字です。';
-    }else{
-      $alert_message.textContent = $setting_length - $length + '文字足りません。';
-    }
+  //  if($setting_length - $length < 0){
+  //     $alert_message.textContent = $length-$setting_length + "文字オーバーしています。";
+  //   }
+  //   else if($setting_length - $length === 0){
+  //     $alert_message.textContent = 'ちょうど'+ $setting_length + '文字です。';
+  //   }else{
+  //     $alert_message.textContent = $setting_length - $length + '文字足りません。';
+  //   }
 
-    $alert_message.classList.add('show');
-  }
+  //   $alert_message.classList.add('show');
+  // }
   
-  $counter_button.addEventListener('click', () =>{
-    numberCheck();
-    count();
-  })
+  // $counter_button.addEventListener('click', () =>{
+  //   numberCheck();
+  //   count();
+  // })
 
 
-  function copy() {
-    let textTarget = document.querySelector('#content');
-    textTarget.select();
-    document.execCommand('Copy');
+  // function copy() {
+  //   let textTarget = document.querySelector('#content');
+  //   textTarget.select();
+  //   document.execCommand('Copy');
 
-    $result.classList.add('show');
+  //   $result.classList.add('show');
 
-    setTimeout(() => {
-    $result.classList.remove('show');
-    },6000);
+  //   setTimeout(() => {
+  //   $result.classList.remove('show');
+  //   },6000);
   
-  }
+  // }
   
 
 
-  $copy_button.addEventListener('click', () => {
-  copy();
-  })
+  // $copy_button.addEventListener('click', () => {
+  // copy();
+  // })
 }
