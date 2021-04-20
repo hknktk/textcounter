@@ -13,52 +13,18 @@
   function numberCheck() {
     let $setting_length = document.querySelector('#setting_length').value;
     if(!isNaN($setting_length)){
-      let $length = $text.value.length;
       let $setting_length = document.querySelector('#setting_length').value;
+      $alert_message.classList.add('show');
+      $alert_message.textContent = $setting_length + '文字に設定しました。';
   
       if($setting_length === ''){
         return;
       }
-  
-      else if($setting_length - $length < 0){
-        $alert_message.textContent = $length-$setting_length + "文字オーバーしています。";
-      }
-      else if($setting_length - $length === 0){
-        $alert_message.textContent = 'ちょうど'+ $setting_length + '文字です。';
-      }else{
-        $alert_message.textContent = $setting_length - $length + '文字足りません。';
-      }
-      $alert_message.classList.add('show');
-    }else{
-      $alert_message.textContent = '数字以外が入力されています。';
-      $alert_message.classList.add('show');
     }
   }
 
-
   $set_button.addEventListener('click', () =>{
-    let $setting_length = document.querySelector('#setting_length').value;
-    if(!isNaN($setting_length)){
-      let $length = $text.value.length;
-      let $setting_length = document.querySelector('#setting_length').value;
-  
-      if($setting_length === ''){
-        return;
-      }
-  
-      else if($setting_length - $length < 0){
-        $alert_message.textContent = $length-$setting_length + "文字オーバーしています。";
-      }
-      else if($setting_length - $length === 0){
-        $alert_message.textContent = 'ちょうど'+ $setting_length + '文字です。';
-      }else{
-        $alert_message.textContent = $setting_length - $length + '文字足りません。';
-      }
-      $alert_message.classList.add('show');
-    }else{
-      $alert_message.textContent = '数字以外が入力されています。';
-      $alert_message.classList.add('show');
-    }
+    numberCheck();
   })
 
 
@@ -83,11 +49,12 @@
     }else{
       $alert_message.textContent = $setting_length - $length + '文字足りません。';
     }
+
+    $alert_message.classList.add('show');
   })
-  
 
 
-  $copy_button.addEventListener('click', () => {
+  function copy() {
     let textTarget = document.querySelector('#content');
     textTarget.select();
     document.execCommand('Copy');
@@ -97,10 +64,12 @@
     setTimeout(() => {
     $result.classList.remove('show');
     },6000);
+  
+  }
+  
+
+
+  $copy_button.addEventListener('click', () => {
+  copy();
   })
-
-
-
-
-
 }
